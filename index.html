@@ -3,41 +3,72 @@
     <head>
         <title>Dog Plants</title>
         <link rel="stylesheet" type = "text/css" href="styles/styles.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" type = "text/css" href="styles/styles.css">
     </head>
     <body>
-        <header>
-            <img src="#" alt="Dog plants logo">
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="products.html">Products</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
+            <header>
+                <div class="container">
+                    <a href="index.html"><img src="images/logo2.png" alt="Dog plants logo"></a>
+                    <div class="flexColumn">
+                        <h1>Pet Friendly Plants</h1>
+                        <nav>
+                            <ul>
+                                <li><a href="index.html">About</a></li>
+                                <li><a href="products.html">Products</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
         <main>
-            <img src="#" alt="image of different plants">
-            <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate, inventore adipisci. 
-                Nemo tempora ea cumque numquam reprehenderit officiis consectetur voluptatum recusandae 
-                repellendus error excepturi dicta magnam id, similique deserunt minima dolores quam quae, 
-                est culpa quo illum neque. Laboriosam minima est perspiciatis, velit sequi tempore 
-                quisquam deleniti vel excepturi aliquam autem tempora fugit quo corporis!
-            </p>
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                    <img class="d-block w-100" src="https://via.placeholder.com/1028x400" alt="First slide">
+                    </div>
+                    <div class="carousel-item">
+                    <img class="d-block w-100" src="https://via.placeholder.com/1028x400" alt="Second slide">
+                    </div>
+                    <div class="carousel-item">
+                    <img class="d-block w-100" src="https://via.placeholder.com/1028x400" alt="Third slide">
+                    </div>
+            </div>
+            </div>
+            <div class="container flexRow">
+                <img src="https://via.placeholder.com/300x250" alt="">
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate, inventore adipisci. 
+                    Nemo tempora ea cumque numquam reprehenderit officiis consectetur voluptatum recusandae 
+                    repellendus error excepturi dicta magnam id, similique deserunt minima dolores quam quae, 
+                    est culpa quo illum neque. Laboriosam minima est perspiciatis, velit sequi tempore 
+                    quisquam deleniti vel excepturi aliquam autem tempora fugit quo corporis!
+                </p>
+            </div>
         </main>
-        <section class="quicklinks">
-            <a href="#"><img src="#" alt="link to goto plants catalog"></a>
-            <a href="#"><img src="#" alt="link to goto for the dogs catalog"></a>
+        <section id="quickLinks" class="container">
+            <a href="#"><img src="https://via.placeholder.com/440x200" alt="link to goto plants catalog"></a>
+            <a href="#"><img src="https://via.placeholder.com/440x200" alt="link to goto for the dogs catalog"></a>
         </section>
-        <section>
+        <section class="container flexColumn">
             <h2>Get in touch!</h2>
-            <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque deleniti incidunt praesentium earum 
-                pariatur sed accusamus officiis ipsa culpa ea impedit ad, provident, distinctio dicta.
-            </p>
+            <div id="contact"class="flexRow">
+                <p><strong>Hours: </strong><em>Everyday 10am-6pm</em></p>
+                <p><strong>Phone: </strong><em>(512) 867-5309</em></p>
+                <p><strong>Address: </strong><em>123 Any Street <b>|</b> City, State 54545</em></p>
+            </div>
+            <div id='social' class="flexRow">
+                <img src="images/facebook.png" alt="facebook">
+                <img src="images/twitter.png" alt="twitter">
+                <img src="images/instagram.png" alt="instagram">
+            </div>
         </section>
         <footer>
             Lorem ipsum dolor sit amet consectetur.
         </footer>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     </body>
 </html>

@@ -1,0 +1,128 @@
+/*Styles are for large screens and will cascade down to small screens */
+/*Styles below will apply to every page*/
+html {
+    font-size: 12pt;
+}
+
+body {
+    background-color: rgb(254, 255, 202);
+}
+
+.container {
+    max-width: 940px;
+    width: 100%; 
+    margin: 0 auto;
+}
+
+.flexColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+.flexRow {
+    display: flex;
+}
+
+.floatRight {
+    float: right;
+}
+
+.floatLeft {
+    float: left;
+}
+
+header {
+    position: absolute;
+    top: 0px;
+    z-index: 1;
+    margin: 0 auto;
+    width: 100%;
+}
+
+header div.container {
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    max-width: 940px;
+    width: 100%;
+    height: 150px;
+    margin: 0 auto;
+}
+
+
+header h1 {
+    align-self: flex-start;
+    justify-self: center;
+    letter-spacing: 0.4em;
+
+}
+
+header:hover {
+    background-color: rgba(188, 255, 175, 0.8);
+}
+
+header img{
+    height: auto;
+    width: 100%;
+    max-width: 150px;
+    float: left;
+}
+
+
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav ul li{
+    display: inline;
+    font-size: 2em;
+    justify-self: center;
+}
+
+nav a:hover {
+    color: green;
+}
+
+main div.container {
+    margin: 15px auto;
+    align-items: center;
+    
+}
+
+main p {
+    margin-left: 15px;
+}
+
+#quickLinks {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+section.container h2 {
+    text-align: center;
+}
+
+div#contact {
+    justify-content: space-evenly;
+}
+
+div#social {
+    justify-content: center;
+    padding: 5px;
+}
+
+div#social img {
+    height: 25px;
+    width: 25px;
+    margin-left: 10px;
+}
+
+footer {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    font-size: x-small;
+    text-align: center;
+}
