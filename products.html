@@ -22,10 +22,10 @@
                 </div>
             </header>
         <main>
-            <section class="container" id="plantLayout">
+            <section class="container availableProducts" id="plantLayout">
                 <div id="gridStart" class="flexRow">
-                    <h2><a href="#">Plants</a></button>
-                    <h2><a href="#">For The Dogs</a></button>
+                    <h2 class="tabLinks" onclick="browseProducts(event, 'plantLayout')"><a href="#">Plants</a></button>
+                    <h2 class="tabLinks" onclick="browseProducts(event,  'dogLayout')"><a href="#">For The Dogs</a></button>
                 </div>
                 <div class="product">
                     <img src="images/babyTears.jpg" alt="baby tears">
@@ -64,7 +64,11 @@
                     <button class="Buttons">More Info</button>
                 </div>
             </section>
-            <section class="container" id="dogLayout">
+            <section class="container availableProducts" id="dogLayout">
+                <div id="gridStart" class="flexRow">
+                    <h2 class="tabLinks" onclick="browseProducts(event, 'plantLayout')"><a href="#">Plants</a></h2>
+                    <h2 class="tabLinks" onclick="browseProducts(event,  'dogLayout')"><a href="#">For The Dogs</a></h2>
+                </div>
                 <div class="product">
                     <img src="images/bearToy.png" alt="Bear dog toy">
                     <h3>Bear Toy<h3>
@@ -101,5 +105,6 @@
             Lorem ipsum dolor sit amet consectetur.
             </p>
         </footer>
+        <script src="scripts/script.js"></script>
     </body>
 </html>
