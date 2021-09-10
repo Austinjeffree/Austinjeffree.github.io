@@ -21,18 +21,32 @@
                     </div>
                 </div>
             </header>
-        <main>
+        <section id="contactForm" class="mediumContainer">
             <form action="">
-                <label for="name">Name:</label>
-                <input type="text" name="name" placeholder="Enter your full name" required="required">
-                <label for="email">E-mail Address:</label>
-                <input type="email" name="email" placeholder="Enter your email address" required="required">
-                <label for="inquiry">How can we help?</label>
-                <input type="textarea" name="inquiry" required="required">
+                <div id="name">
+                    <label for="name" id="name">Name:</label>
+                    <input type="text" name="name"placeholder="Enter your full name" required="required">
+                </div>
+                <div id="email">
+                    <label for="email">E-mail Address:</label>
+                    <input type="email" name="email" placeholder="Enter your email address" required="required">
+                </div>
+                <div id="inquiry">
+                    <label for="inquiry">How can we help?</label>
+                    <textarea rows="5" cols="30" name="inquiry" required="required"></textarea>
+                </div>
+                <button id="submit" type="submit">Send Email</button>
             </form>
-        </main>
+        </section>
         <footer>
+            <div id='social' class="flexRow">
+                <a href="#"><img src="images/facebook.png" alt="facebook"></a>
+                <a href="#"><img src="images/twitter.png" alt="twitter"></a>
+                <a href="#"><img src="images/instagram.png" alt="instagram"></a>
+            </div>
+            <p>
             Lorem ipsum dolor sit amet consectetur.
+            </p>
         </footer>
     </body>
 </html>
