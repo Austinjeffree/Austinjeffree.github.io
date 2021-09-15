@@ -11,14 +11,14 @@ function browseProducts(evt, productCategory) {
   }
 
 
-var close = document.getElementsByClassName("close");
+/* open/close additional info on product page*/
  
 function openProduct(productInfo) {
     document.getElementById(productInfo).style.display = "block";
 
 }
 
-function closeProduct(productInfo) {;
+function closeProduct(productInfo) {
     document.getElementById(productInfo).style.display = "none";
     
 }

@@ -13,6 +13,7 @@ body {
     width: 100%; 
     margin: 0 auto;
 }
+
 .mediumContainer {
     max-width: 600px;
     width: 100%;
@@ -39,88 +40,50 @@ body {
 
 header {
     position: absolute;
-    top: 0px;
+    top: 0;
     z-index: 1;
+    align-content: center;
     margin: 0 auto;
     width: 100%;
-}
-
-header div.container {
-    display: flex;
-    justify-content:space-around;
-    align-items: center;
-    max-width: 940px;
-    width: 100%;
-    height: 150px;
-    margin: 0 auto;
 }
 
 
 header h1 {
-    align-self: flex-start;
-    justify-self: center;
-    letter-spacing: 0.4em;
-
+    letter-spacing: 0.75rem;
+    text-align: center;
 }
 
 header:hover {
     background-color: rgba(188, 255, 175, 0.8);
+    max-width: none;
 }
 
 header img{
     height: auto;
     width: 100%;
     max-width: 150px;
-    float: left;
+    min-width: 100px;
 }
 
+.carousel-item img{
+    min-height: 200px;
+}
 
 nav ul {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    margin: 0px auto;
+    max-width: 100%;
+    padding: 0px;
 }
 
 nav ul li{
     display: inline;
     font-size: 2em;
-    justify-self: center;
 }
 
 nav a:hover {
     color: green;
-}
-
-/* Styles below this line will apply to home page only */
-
-main div.container {
-    margin: 15px auto;
-    align-items: center;
-    
-}
-
-main p {
-    margin-left: 15px;
-}
-
-#quickLinks {
-    margin-top: 15px;
-    display: flex;
-    justify-content: space-evenly;
-}
-
-section.container h2 {
-    text-align: center;
-}
-
-div#contact {
-    justify-content: space-evenly;
-}
-
-div#contact p {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
 }
 
 div#social {
@@ -142,6 +105,53 @@ footer {
     text-align: center;
 }
 
+/* Styles below this line will apply to home page only */
+
+main div.container {
+    margin: 15px auto;
+    align-items: center;
+    
+}
+
+main p {
+    margin-left: 15px;
+}
+
+main img {
+    width: 100%;
+    height: auto;
+}
+
+#quickLinks {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#quickLinks a{
+    margin:5px;
+}
+
+#quickLinks img {
+    width: 100%;
+    height: auto;
+}
+
+section.container h2 {
+    text-align: center;
+}
+
+div#contact {
+    justify-content: space-evenly;
+}
+
+div#contact p {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
 /* Styles below this line will apply to contact page only */
 
 section#contactForm form {
@@ -149,14 +159,14 @@ section#contactForm form {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    margin-top: 175px;
+    margin-top: 120px;
     padding-top: 25px;
 }
 
 #inquiry {
     grid-area: 1/2/3/3;
     align-self: baseline;
-    
+    margin-right: 60px;    
 }
 
 #name {
@@ -183,12 +193,10 @@ section#contactForm form {
     margin: 0 auto 10px auto;
 }
 
-#inquiry {
-    margin-right: 60px;
-}
+/*Styles will impact product page */
 
 #dogLayout, #plantLayout {
-    margin-top: 175px;
+    margin-top: 120px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
@@ -265,7 +273,6 @@ div#gridStart h2 {
 
   /* The Close Button */
 .close {
-    width: 15px;
     color: #aaaaaa;
     float: right;
     font-size: 28px;
@@ -278,3 +285,85 @@ div#gridStart h2 {
     text-decoration: none;
     cursor: pointer;
   }
+
+  /* Styles are for medium screens and will cascade down to small screens */
+
+  /*Styles specific to index page */
+  @media only screen and (max-width:768px) {
+    body {
+        background-color: green;
+    }
+
+    .container {
+        max-width: 768px;
+        width: 100%; 
+        margin: 0 auto;
+    }
+
+    header div.container {
+        max-width: 768px;
+    }
+
+    header h1 {
+        letter-spacing: 0.2rem;
+    }
+  }
+
+    /* Styles are for small screens */
+@media only screen and (max-width:480px) {
+
+    /*Styles specific will impact all pages */
+    header {
+        height: 50px;
+    }
+
+    header h1 {
+        display: none;
+    }
+
+    header {
+        max-width: 480px;
+        justify-content: center;
+    }
+
+    nav{
+        font-size: 0.75em;
+   }
+
+    nav a {
+       margin-left: 5px;
+   }
+
+   /* styles will impact index page only */
+    main div.flexRow {
+        flex-direction: column;
+    }
+
+    #quickLinks {
+        flex-direction: column;
+    }
+
+    /*styles will impact contact page only */
+
+    section#contactForm form {
+        background: rgb(254, 255, 202);
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        margin-top: 120px;
+        padding-top: 25px;
+    }
+    
+    #inquiry, #name, #email, #submit{
+        grid-area: auto;    
+        width: 100%;
+        height: auto;
+        margin: 0 auto; 
+        text-align: center;   
+    }
+    
+    #name input, #email input, #inquiry textarea, #submit {
+        width: 90%;
+        margin: 0px auto;
+    }
+}
