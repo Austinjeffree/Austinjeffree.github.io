@@ -213,7 +213,8 @@ section#contactForm form {
 }
 
 div.product{
-    width: 310px;
+    width: 100%;
+    max-width: 300px;
     height: auto;
     border: 2px black solid;
     margin: 5px auto; 
@@ -222,6 +223,7 @@ div.product{
     justify-items: center;
     align-items: center;
     padding: 5px 0;
+    text-align: center;
 }
 
 
@@ -242,7 +244,8 @@ div#gridStart h2 {
 }
 
 .buttons{
-    width: 200px;
+    max-width: 200px;
+    width: 100%;
     height: 50px;
     margin: 5px;
 }
@@ -288,7 +291,7 @@ div#gridStart h2 {
 
   /* Styles are for medium screens and will cascade down to small screens */
 
-  /*Styles specific to index page */
+  /*Styles will impact every page page */
   @media only screen and (max-width:768px) {
     body {
         background-color: green;
@@ -296,8 +299,6 @@ div#gridStart h2 {
 
     .container {
         max-width: 768px;
-        width: 100%; 
-        margin: 0 auto;
     }
 
     header div.container {
@@ -307,12 +308,27 @@ div#gridStart h2 {
     header h1 {
         letter-spacing: 0.2rem;
     }
+
+    /*Styles will impact product page */
+
+    #dogLayout, #plantLayout {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+    }
+
+    div#gridStart {
+        grid-area: 1/1/2/3;
+    }
   }
 
     /* Styles are for small screens */
 @media only screen and (max-width:480px) {
 
     /*Styles specific will impact all pages */
+    .container {
+        max-width: 480px;
+    }
+
     header {
         height: 50px;
     }
@@ -366,4 +382,17 @@ div#gridStart h2 {
         width: 90%;
         margin: 0px auto;
     }
+    
+    /*Styles will impact product page only*/
+    #dogLayout, #plantLayout {
+        margin-top: 70px;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    div#gridStart {
+        grid-area: 1/1/2/2;
+    }
+
+
 }
