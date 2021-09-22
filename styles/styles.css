@@ -1,11 +1,13 @@
 /*Styles are for large screens and will cascade down to small screens */
 /*Styles below will apply to every page*/
+@import url('https://fonts.googleapis.com/css2?family=Mate+SC&display=swap');
+
 html {
     font-size: 12pt;
 }
 
 body {
-    background-color: rgb(254, 255, 202);
+    background-color: #f7e2d2;
 }
 
 .container {
@@ -45,6 +47,8 @@ header {
     align-content: center;
     margin: 0 auto;
     width: 100%;
+    background-color: rgba(209, 231, 214, 0.6);
+    font-family: 'Mate SC', serif;
 }
 
 
@@ -54,8 +58,9 @@ header h1 {
 }
 
 header:hover {
-    background-color: rgba(188, 255, 175, 0.8);
+    background-color: rgb(209, 231, 214);
     max-width: none;
+
 }
 
 header img{
@@ -69,6 +74,11 @@ header img{
     min-height: 200px;
 }
 
+nav a {
+    font-size: 2em;
+    color: green;
+}
+
 nav ul {
     display: flex;
     justify-content: space-between;
@@ -79,7 +89,6 @@ nav ul {
 
 nav ul li{
     display: inline;
-    font-size: 2em;
 }
 
 nav a:hover {
@@ -106,18 +115,26 @@ footer {
 }
 
 /* Styles below this line will apply to home page only */
+.carousel {
+    border-bottom: 1px gray solid;
 
+
+}
 main div.container {
     margin: 15px auto;
     align-items: center;
-    
+    border-radius: 10px;
+    background-color: #d1e7d6;
+    box-shadow: 3px 3px 0.4em  #272727, -5px -3px 0.4em #272727;
+
 }
 
 main p {
     margin-left: 15px;
+    color: #b98d64;
 }
-
-main img {
+#logo {
+    max-width: 250px;
     width: 100%;
     height: auto;
 }
@@ -130,11 +147,35 @@ main img {
 
 #quickLinks a{
     margin:5px;
+    border-radius: 10px;
 }
 
 #quickLinks img {
     width: 100%;
     height: auto;
+    border-radius: 10px;
+    border: 1px gray solid;
+}
+
+#quickLinks img:hover {
+    opacity: 0.5;
+    transition: opacity .5s ease, visibility .5s;
+}
+
+.shopNow:hover .img_description:hover {
+    visibility: visible;
+
+}
+
+.img_description {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: rgb(0, 0, 0);
+    visibility: hidden;
+    opacity: 0;
 }
 
 section.container h2 {
@@ -155,7 +196,9 @@ div#contact p {
 /* Styles below this line will apply to contact page only */
 
 section#contactForm form {
-    background: rgb(254, 255, 202);
+    border-radius: 10px;
+    background-color: #d1e7d6;
+    box-shadow: 3px 3px 0.4em  #272727, -5px -3px 0.4em #272727;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
@@ -214,9 +257,8 @@ section#contactForm form {
 
 div.product{
     width: 100%;
-    max-width: 300px;
+    max-width: 290px;
     height: auto;
-    border: 2px black solid;
     margin: 5px auto; 
     display: flex;
     flex-direction: column;
@@ -224,13 +266,19 @@ div.product{
     align-items: center;
     padding: 5px 0;
     text-align: center;
+    box-shadow: -2px -1px 0.2em #272727,  1px 1px 0.4em  #272727;
+    border-radius: 10px;
+    background-color: #6dd487;
 }
 
 
 div.product img {
-    width: 100%;
+    width: 95%;
     height: auto;
     max-width: 300px;
+    border-radius: 4px;
+    border: solid 1px black;
+
 }
 
 div#gridStart {
@@ -248,34 +296,44 @@ div#gridStart h2 {
     width: 100%;
     height: 50px;
     margin: 5px;
+    border-radius: 5px;
 }
 
 /* The Modal (background) */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
+    display: none; 
+    position: fixed;
+    z-index: 1; 
+    padding-top: 100px; 
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
   }
   
   /* Modal Content */
   .modal-content {
-    background-color: #fefefe;
-    margin: auto;
+    border-radius: 10px;
+    background-color: #d1e7d6;
+    box-shadow: 3px 3px 0.4em  #272727, -5px -3px 0.4em #272727;
+    margin: 0 auto;
     padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
+    max-width: 500px;
+  }
+
+
+  .modalImage {
+    width: 100%;
+    height: auto;
   }
 
   /* The Close Button */
 .close {
+    max-width: 20px;
+    margin: 0px 0px 0px auto;
     color: #aaaaaa;
     float: right;
     font-size: 28px;
