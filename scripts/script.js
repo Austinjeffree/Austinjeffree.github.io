@@ -15,10 +15,12 @@ function browseProducts(evt, productCategory) {
  
 function openProduct(productInfo) {
     document.getElementById(productInfo).style.display = "block";
+    document.body.style.overflow = "hidden";
 
 }
 
 function closeProduct(productInfo) {
     document.getElementById(productInfo).style.display = "none";
+    document.body.style.overflow = "scroll";
     
 }

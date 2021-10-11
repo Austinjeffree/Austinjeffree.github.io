@@ -4,10 +4,11 @@
 
 html {
     font-size: 12pt;
+    height: 100%;
 }
 
 body {
-    background-color: #f7e2d2;
+    background-color: rgb(255, 252, 235);
 }
 
 .container {
@@ -41,13 +42,10 @@ body {
 }
 
 header {
-    position: absolute;
-    top: 0;
-    z-index: 1;
     align-content: center;
     margin: 0 auto;
     width: 100%;
-    background-color: rgba(209, 231, 214, 0.6);
+    background-color: rgba(253, 141, 100, 0.5);
     font-family: 'Mate SC', serif;
 }
 
@@ -55,12 +53,7 @@ header {
 header h1 {
     letter-spacing: 0.75rem;
     text-align: center;
-}
-
-header:hover {
-    background-color: rgb(209, 231, 214);
-    max-width: none;
-
+    color: white;
 }
 
 header img{
@@ -76,7 +69,7 @@ header img{
 
 nav a {
     font-size: 2em;
-    color: green;
+    color: white;
 }
 
 nav ul {
@@ -107,31 +100,35 @@ div#social img {
 }
 
 footer {
+    position: relative;
+    bottom: 0;
     width: 100%;
     height: auto;
-    margin: 0 auto;
+    margin-top: 100px;
     font-size: x-small;
     text-align: center;
+    background-color: rgba(253, 141, 100, 0.5);
+
+
 }
 
 /* Styles below this line will apply to home page only */
 .carousel {
     border-bottom: 1px gray solid;
-
-
+    margin-bottom: 100px;
 }
 main div.container {
     margin: 15px auto;
     align-items: center;
     border-radius: 10px;
-    background-color: #d1e7d6;
-    box-shadow: 3px 3px 0.4em  #272727, -5px -3px 0.4em #272727;
+    background-color: #fffceb;
+    box-shadow: 3px 3px 0.4em  #fd8d64, -5px -3px 0.4em #fd8d64;
 
 }
 
 main p {
     margin-left: 15px;
-    color: #b98d64;
+    color: black;
 }
 #logo {
     max-width: 250px;
@@ -140,7 +137,7 @@ main p {
 }
 
 #quickLinks {
-    margin-top: 15px;
+    margin: 100px auto;
     display: flex;
     justify-content: space-evenly;
 }
@@ -182,6 +179,12 @@ section.container h2 {
     text-align: center;
 }
 
+#getInTouch {
+    border-radius: 10px;
+    background-color: #fffceb;
+    box-shadow: 3px 3px 0.4em  #fd8d64, -5px -3px 0.4em #fd8d64;
+}
+
 div#contact {
     justify-content: space-evenly;
 }
@@ -197,12 +200,12 @@ div#contact p {
 
 section#contactForm form {
     border-radius: 10px;
-    background-color: #d1e7d6;
+    background-color: #fd8d64;
     box-shadow: 3px 3px 0.4em  #272727, -5px -3px 0.4em #272727;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    margin-top: 120px;
+    margin: 100px auto;
     padding-top: 25px;
 }
 
@@ -268,7 +271,7 @@ div.product{
     text-align: center;
     box-shadow: -2px -1px 0.2em #272727,  1px 1px 0.4em  #272727;
     border-radius: 10px;
-    background-color: #6dd487;
+    background-color: #fd8d64;
 }
 
 
@@ -277,7 +280,7 @@ div.product img {
     height: auto;
     max-width: 300px;
     border-radius: 4px;
-    border: solid 1px black;
+    border: solid 1px gray;
 
 }
 
@@ -296,7 +299,13 @@ div#gridStart h2 {
     width: 100%;
     height: 50px;
     margin: 5px;
-    border-radius: 5px;
+    border-radius: 8px;
+
+}
+
+.buttons:hover {
+    cursor: pointer;
+    opacity: 0.75;
 }
 
 /* The Modal (background) */
@@ -313,24 +322,39 @@ div#gridStart h2 {
     background-color: rgb(0,0,0); 
     background-color: rgba(0,0,0,0.4); 
   }
-  
-  /* Modal Content */
+
   .modal-content {
     border-radius: 10px;
-    background-color: #d1e7d6;
+    background-color: #f4efd2;
     box-shadow: 3px 3px 0.4em  #272727, -5px -3px 0.4em #272727;
     margin: 0 auto;
     padding: 20px;
     max-width: 500px;
   }
 
+  table {
+      border: gray solid 1px;
+      border-radius: 5px;
+      text-align: center;
+      background-color: #f4efd2;
+      border-collapse: separate;
+      width: 100%;
+  }
+
+  th, td {
+      background-color: #fd8d64;
+      padding: 5px;
+  }
+  
 
   .modalImage {
     width: 100%;
     height: auto;
+    border: gray solid 1px;
+    margin-bottom: 10px;
+    border-radius: 4px;
   }
 
-  /* The Close Button */
 .close {
     max-width: 20px;
     margin: 0px 0px 0px auto;
