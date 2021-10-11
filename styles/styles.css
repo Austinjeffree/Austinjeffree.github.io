@@ -49,7 +49,6 @@ header {
     font-family: 'Mate SC', serif;
 }
 
-
 header h1 {
     letter-spacing: 0.75rem;
     text-align: center;
@@ -114,7 +113,6 @@ footer {
 
 /* Styles below this line will apply to home page only */
 .carousel {
-    border-bottom: 1px gray solid;
     margin-bottom: 100px;
 }
 main div.container {
@@ -123,7 +121,7 @@ main div.container {
     border-radius: 10px;
     background-color: #fffceb;
     box-shadow: 3px 3px 0.4em  #fd8d64, -5px -3px 0.4em #fd8d64;
-
+    padding: 10px;
 }
 
 main p {
@@ -139,47 +137,63 @@ main p {
 #quickLinks {
     margin: 100px auto;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
-#quickLinks a{
-    margin:5px;
+.shopNow {
+    position: relative;
+    float: left;
+   }
+
+.shopNow a{
     border-radius: 10px;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(253, 141, 100, 0.75);
+    color: white;
+    text-decoration: none;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: visibility 0s, opacity 0.5s linear;
+    transition: visibility 0s, opacity 0.5s linear;
+}
+
+.shopNow a p {
+    width: 100%;
+    margin: auto 0;
+    text-align: center;
+    font-size: 5.5vh;
+    text-decoration: none;
+    font-family: 'Birthstone', cursive;
 }
 
 #quickLinks img {
     width: 100%;
     height: auto;
     border-radius: 10px;
-    border: 1px gray solid;
 }
 
-#quickLinks img:hover {
-    opacity: 0.5;
-    transition: opacity .5s ease, visibility .5s;
-}
-
-.shopNow:hover .img_description:hover {
+.shopNow:hover{
+    cursor: pointer;
+   }
+   
+.shopNow:hover a{
+    width: 100%;
     visibility: visible;
-
-}
-
-.img_description {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    color: rgb(0, 0, 0);
-    visibility: hidden;
-    opacity: 0;
-}
+    opacity: 0.9; 
+    text-align: center;
+   }
 
 section.container h2 {
     text-align: center;
 }
 
 #getInTouch {
+    padding: 10px;
     border-radius: 10px;
     background-color: #fffceb;
     box-shadow: 3px 3px 0.4em  #fd8d64, -5px -3px 0.4em #fd8d64;
@@ -274,7 +288,6 @@ div.product{
     background-color: #fd8d64;
 }
 
-
 div.product img {
     width: 95%;
     height: auto;
@@ -321,39 +334,38 @@ div#gridStart h2 {
     overflow: auto; 
     background-color: rgb(0,0,0); 
     background-color: rgba(0,0,0,0.4); 
-  }
+}
 
-  .modal-content {
+.modal-content {
     border-radius: 10px;
     background-color: #f4efd2;
     box-shadow: 3px 3px 0.4em  #272727, -5px -3px 0.4em #272727;
     margin: 0 auto;
     padding: 20px;
     max-width: 500px;
-  }
+}
 
-  table {
+table {
       border: gray solid 1px;
       border-radius: 5px;
       text-align: center;
       background-color: #f4efd2;
       border-collapse: separate;
       width: 100%;
-  }
+}
 
-  th, td {
+th, td {
       background-color: #fd8d64;
       padding: 5px;
-  }
-  
+}
 
-  .modalImage {
+.modalImage {
     width: 100%;
     height: auto;
     border: gray solid 1px;
     margin-bottom: 10px;
     border-radius: 4px;
-  }
+}
 
 .close {
     max-width: 20px;
@@ -362,14 +374,13 @@ div#gridStart h2 {
     float: right;
     font-size: 28px;
     font-weight: bold;
-  }
+}
   
-  .close:hover,
-  .close:focus {
+.close:hover, .close:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
-  }
+}
 
   /* Styles are for medium screens and will cascade down to small screens */
 
