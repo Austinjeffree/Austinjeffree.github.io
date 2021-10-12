@@ -3,16 +3,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Mate+SC&display=swap');
 
 html {
-    font-size: 12pt;
     height: 100%;
-}
-
-body {
+    font-size: 12pt;
+    color: #363636;
+    font-family: 'Open Sans Condensed', sans-serif;
     background-color: rgb(255, 255, 255);
 }
 
 .container {
-    max-width: 940px;
+    max-width: 1060px;
     width: 100%; 
     margin: 0 auto;
 }
@@ -46,13 +45,14 @@ header {
     margin: 0 auto;
     width: 100%;
     background-color: rgba(253, 141, 100, 0.5);
-    font-family: 'Mate SC', serif;
 }
 
 header h1 {
     letter-spacing: 0.75rem;
     text-align: center;
     color: white;
+    font-family: 'Pompiere', cursive;
+    font-size: 3.25rem;
 }
 
 header img{
@@ -67,10 +67,15 @@ header img{
 }
 
 nav a {
+    font-family: 'Gruppo', cursive;
     font-size: 2em;
     color: white;
 }
 
+nav a strong {
+    font-weight: bolder;
+    text-decoration: underline;
+}
 nav ul {
     display: flex;
     justify-content: space-between;
@@ -84,7 +89,7 @@ nav ul li{
 }
 
 nav a:hover {
-    color: green;
+    color: white;
 }
 
 div#social {
@@ -111,10 +116,20 @@ footer {
 
 }
 
+h2 {
+    font-family: 'Architects Daughter', cursive;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+
 /* Styles below this line will apply to home page only */
 .carousel {
     margin-bottom: 100px;
+    width: 100%;
+    height: auto;
 }
+
 main div.container {
     margin: 15px auto;
     align-items: center;
@@ -127,6 +142,18 @@ main div.container {
 main p {
     margin-left: 15px;
     color: black;
+    font-family: 'Architects Daughter', cursive;
+    font-size: 1.30rem;
+    font-weight: bold;
+    padding: 10px;
+}
+
+main p em {
+    padding-top: 15px;
+    padding-right: 50px;
+    float: right; 
+    font-family: 'Rock Salt', cursive; 
+    font-size: 2.5rem;
 }
 #logo {
     max-width: 250px;
@@ -137,7 +164,7 @@ main p {
 #quickLinks {
     margin: 100px auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .shopNow {
@@ -173,7 +200,6 @@ main p {
 
 #quickLinks img {
     width: 100%;
-    height: auto;
     border-radius: 10px;
 }
 
@@ -212,14 +238,26 @@ div#contact p {
 
 /* Styles below this line will apply to contact page only */
 
-section#contactForm form {
+#contactForm {
+    margin: 100px auto;
     border-radius: 10px;
-    background-color: #fd8d64;
-    box-shadow: 3px 3px 0.4em  #272727, -5px -3px 0.4em #272727;
+    background-color: #fffceb;
+    box-shadow: 3px 3px 0.4em  #fd8d64, -5px -3px 0.4em #fd8d64;
+}
+#contactForm h2{
+    margin: 0px auto;
+    text-align: center;
+    padding: 10px 0px;
+
+}
+#contactForm h3 {
+    text-align: center; 
+    font-size: 1.5rem;
+}
+section#contactForm form {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    margin: 100px auto;
     padding-top: 25px;
 }
 
@@ -238,15 +276,29 @@ section#contactForm form {
 }
 
 #submit {
+    max-width: 200px;
+    width: 100%;
     grid-area: 3/1/4/3;
-    width: 450px;
     height: 50px;
     margin: 0 auto;
+    height: 50px;
+    margin: 5px;
+    border-radius: 8px;
+    background: transparent;
+    border: 3px solid #fd8d64;
+    color: #fd8d64;
+    justify-self: center;
+}
+
+#submit:hover {
+    cursor: pointer;
+    background-color: #fd8d64;
+    color: white;
 }
 
 #inquiry label, #name label, #email label {
     display: block;
-    font-size: 1.5em;
+    font-size: 1.25em;
 }
 
 #inquiry, #name, #email {
@@ -254,9 +306,17 @@ section#contactForm form {
 }
 
 /*Styles will impact product page */
-
+.activeTab {
+    color: #fd8d64;
+    text-decoration: underline;
+}
+#gridStart h2:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #fd8d64;
+}
 #dogLayout, #plantLayout {
-    margin-top: 120px;
+    margin-top: 100px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
@@ -276,16 +336,16 @@ div.product{
     width: 100%;
     max-width: 290px;
     height: auto;
-    margin: 5px auto; 
+    margin: 5px auto 50px auto; 
     display: flex;
     flex-direction: column;
     justify-items: center;
     align-items: center;
     padding: 5px 0;
     text-align: center;
-    box-shadow: -2px -1px 0.2em #272727,  1px 1px 0.4em  #272727;
+    box-shadow: -2px -1px 0.2em #fd8d64,  1px 1px 0.4em  #fd8d64;
     border-radius: 10px;
-    background-color: #fd8d64;
+    background-color: #fffceb;
 }
 
 div.product img {
@@ -305,20 +365,34 @@ div#gridStart {
 
 div#gridStart h2 {
     margin: 0px 20px 20px 20px;
+    font-family: 'Gruppo', cursive;
+    text-transform: uppercase;
+}
+
+h4 {
+    font-style: italic;
+    font-size: 1.2rem;
+}
+h3 {
+    margin: 0px;
 }
 
 .buttons{
+    font-size: 4vh;
     max-width: 200px;
     width: 100%;
     height: 50px;
     margin: 5px;
     border-radius: 8px;
-
+    background: transparent;
+    border: 3px solid #fd8d64;
+    color: #fd8d64;
 }
 
 .buttons:hover {
-    cursor: pointer;
-    opacity: 0.75;
+    cursor: pointer;;
+    background-color: #fd8d64;
+    color: white;
 }
 
 /* The Modal (background) */
@@ -326,7 +400,7 @@ div#gridStart h2 {
     display: none; 
     position: fixed;
     z-index: 1; 
-    padding-top: 100px; 
+    padding: 25px 0px;
     left: 0;
     top: 0;
     width: 100%; 
@@ -338,7 +412,7 @@ div#gridStart h2 {
 
 .modal-content {
     border-radius: 10px;
-    background-color: #f4efd2;
+    background-color: #ffffff;
     box-shadow: 3px 3px 0.4em  #272727, -5px -3px 0.4em #272727;
     margin: 0 auto;
     padding: 20px;
@@ -346,25 +420,27 @@ div#gridStart h2 {
 }
 
 table {
-      border: gray solid 1px;
-      border-radius: 5px;
-      text-align: center;
-      background-color: #f4efd2;
-      border-collapse: separate;
-      width: 100%;
+    border: #fd8d64 solid 1px;
+    border-radius: 10px;
+    text-align: left;
+    background-color: #f4efd2;
+    width: 100%;
 }
-
+th {
+    padding: 5px;
+}
+td {
+    padding: 5px 5px 5px 15px;
+}
 th, td {
-      background-color: #fd8d64;
-      padding: 5px;
+    background-color: #fffceb;
 }
 
 .modalImage {
     width: 100%;
     height: auto;
-    border: gray solid 1px;
+    border: #363636 solid 1px;
     margin-bottom: 10px;
-    border-radius: 4px;
 }
 
 .close {
@@ -387,7 +463,7 @@ th, td {
   /*Styles will impact every page page */
   @media only screen and (max-width:768px) {
     body {
-        background-color: green;
+        background-color: #ffffff;
     }
 
     .container {
@@ -400,6 +476,19 @@ th, td {
 
     header h1 {
         letter-spacing: 0.2rem;
+    }
+
+    /*Styles will impact index page*/
+    main div.flexRow {
+        flex-direction: column;
+    }
+
+    #quickLinks {
+        flex-direction: column;
+    } 
+
+    .shopNow {
+        margin-bottom: 10px;
     }
 
     /*Styles will impact product page */
@@ -443,13 +532,26 @@ th, td {
        margin-left: 5px;
    }
 
+   h2 {
+       font-size: 2rem;
+   }
+
+   h3 {
+       font-size: 1.5rem;
+   }
+
+   h4 {
+       font-size: 1rem;
+   }
+
    /* styles will impact index page only */
-    main div.flexRow {
-        flex-direction: column;
+
+    main p {
+        font-weight: normal;
     }
 
-    #quickLinks {
-        flex-direction: column;
+    #contact {
+        display: block;
     }
 
     /*styles will impact contact page only */
@@ -486,6 +588,5 @@ th, td {
     div#gridStart {
         grid-area: 1/1/2/2;
     }
-
-
 }
+

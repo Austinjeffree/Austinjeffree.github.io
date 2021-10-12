@@ -2,13 +2,15 @@
 <html lang="en-US">
     <head>
         <title>Pawsome Plants</title>
-        <link rel="stylesheet" type = "text/css" href="styles/styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Rock+Salt&?family=Open+Sans+Condensed:wght@300&family=Gruppo&family=Pompiere&display=swap" rel="stylesheet">        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" type = "text/css" href="styles/styles.css">
     </head>
     <body>
         <header class="flexColumn">
-            <h1 class=>Pawsome Plants</h1>
+            <h1>Pawsome Plants</h1>
             <nav class="container">
                 <ul>
                     <li><a href="index.html">About</a></li>
@@ -20,13 +22,13 @@
         <main>
             <section class="container availableProducts" id="plantLayout">
                 <div id="gridStart" class="flexRow">
-                    <h2 class="tabLinks" onclick="browseProducts(event, 'plantLayout')"><a href="#">Plants</a></button>
-                    <h2 class="tabLinks" onclick="browseProducts(event,  'dogLayout')"><a href="#">For The Dogs</a></button>
+                    <h2 class="activeTab" onclick="browseProducts(event, 'plantLayout')">Plants</h2>
+                    <h2 onclick="browseProducts(event,  'dogLayout')">For The Dogs</h2>
                 </div>
                 <div class="product">
                     <img src="images/babyTears.jpg" alt="baby tears">
                     <h3>Baby Tears<h3>
-                    <p>$24.99</p>
+                    <h4>$24.99</h4>
                     <button class="buttons" onclick="openProduct('babyTearsInfo')">More Info</button>
                 </div>
                 <div class="modal" id="babyTearsInfo">
@@ -56,7 +58,7 @@
                 <div class="product">
                     <img src="images/bostonFern.jpg" alt="boston fern">
                     <h3>Boston Fern<h3>
-                    <p>$28.99</p>
+                    <h4>$28.99</h4>
                     <button class="buttons" onclick="openProduct('bostonFernInfo')">More Info</button>
                 </div>
                 <div class="modal" id="bostonFernInfo">
@@ -86,7 +88,7 @@
                 <div class="product">
                     <img src="images/calathea.jpg" alt="Calathea" >
                     <h3>Calathea<h3>
-                    <p>$16.99</p>
+                    <h4>$16.99</h4>
                     <button class="buttons" onclick="openProduct('calatheaInfo')">More Info</button>
                 </div>
                 <div class="modal" id="calatheaInfo">
@@ -116,7 +118,7 @@
                 <div class="product">
                     <img src="images/friendshipPlant.png" alt="Friendship plant">
                     <h3>Friendship Plant<h3>
-                    <p>$32.99</p>
+                    <h4>$32.99</h4>
                     <button class="buttons" onclick="openProduct('friendshipPlantInfo')">More Info</button>
                 </div>
                 <div class="modal" id="friendshipPlantInfo">
@@ -146,7 +148,7 @@
                 <div class="product">
                     <img src="images/parlorPalm.jpg" alt="Parlor palm">
                     <h3>Parlor Palm<h3>
-                    <p>$59.99</p>
+                    <h4>$59.99</h4>
                     <button class="buttons" onclick="openProduct('parlorPalmInfo')">More Info</button>
                 </div>
                 <div class="modal" id="parlorPalmInfo">
@@ -176,7 +178,7 @@
                 <div class="product">
                     <img src="images/spiderPlant.jpg" alt="Spider plant">
                     <h3>Spider Plant<h3>
-                    <p>$12.99</p>
+                    <h4>$12.99</h4>
                     <button class="buttons" onclick="openProduct('spiderPlantInfo')">More Info</button>
                 </div>
                 <div class="modal" id="spiderPlantInfo">
@@ -206,13 +208,13 @@
             </section>
             <section class="container availableProducts" id="dogLayout">
                 <div id="gridStart" class="flexRow">
-                    <h2 onclick="browseProducts(event, 'plantLayout')"><a href="#">Plants</a></h2>
-                    <h2 onclick="browseProducts(event,  'dogLayout')"><a href="#">For The Dogs</a></h2>
+                    <h2 onclick="browseProducts(event, 'plantLayout')">Plants</h2>
+                    <h2 class="activeTab" onclick="browseProducts(event,  'dogLayout')">For The Dogs</h2>
                 </div>
                 <div class="product">
                     <img src="images/bearToy.png" alt="Bear dog toy">
                     <h3>Bear Toy<h3>
-                    <p>$24.99</p>
+                    <h4>$24.99</h4>
                     <button class="buttons" onclick="openProduct('bearToyInfo')">More Info</button>
                 </div>
                 <div class="modal" id="bearToyInfo">
@@ -227,7 +229,7 @@
                 <div class="product">
                     <img src="images/dogBed.jpg" alt="Dog Bed">
                     <h3>Dog Bed<h3>
-                    <p>$149.99</p>
+                    <h4>$149.99</h4>
                     <button class="buttons moreInfo" onclick="openProduct('dogBedInfo')">More Info</button>
                 </div>
                 <div class="modal" id="dogBedInfo">
@@ -242,7 +244,7 @@
                 <div class="product">
                     <img src="images/hamBone.jpg" alt="Ham Bone">
                     <h3>Ham Bone<h3>
-                    <p>5.99</p>
+                    <h4>5.99</h4>
                     <button class="buttons" onclick="openProduct('hamBoneInfo')">More Info</button>
                 </div>
                 <div class="modal" id="hamBoneInfo">
@@ -257,7 +259,7 @@
                 <div class="product">
                     <img src="images/tennisBalls.jpg" alt="Tennis Balls">
                     <h3>Tennis Balls<h3>
-                    <p>8.99</p>
+                    <h4>8.99</h4>
                     <button class="buttons" onclick="openProduct('tennisBallsInfo')">More Info</button>
                 </div>
                 <div class="modal" id="tennisBallsInfo">
