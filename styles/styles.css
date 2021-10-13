@@ -232,6 +232,7 @@ div#contact p {
     background-color: #fffceb;
     border-radius: 10px;
     box-shadow: 3px 3px 0.4em  #fd8d64, -5px -3px 0.4em #fd8d64;
+
 }
 
 #contactForm h2{
@@ -247,10 +248,10 @@ div#contact p {
 }
 
 section#contactForm form {
+    margin-top: 25px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    padding-top: 25px;
 }
 
 #inquiry {
@@ -272,7 +273,7 @@ section#contactForm form {
     max-width: 200px;
     height: 50px;
     grid-area: 3/1/4/3;
-    margin: 0 auto;
+    margin: 0 auto 5px auto;
     justify-self: center;
     background: transparent;
     border-radius: 8px;
@@ -512,6 +513,12 @@ th, td {
     }
   }
 
+  /*Styles will impact contact page */
+
+  #contactForm {
+      padding: 10px;
+  }
+
     /* Styles are for small screens */
     @media only screen and (max-width:480px) {
     /*Styles specific will impact all pages */
@@ -581,8 +588,6 @@ th, td {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: auto;
-        margin-top: 50px;
-        padding-top: 25px;
     }
     
     #inquiry, #name, #email, #submit{
@@ -614,6 +619,6 @@ th, td {
     }
 
     .buttons {
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 }
