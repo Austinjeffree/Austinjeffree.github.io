@@ -1,6 +1,5 @@
 /*Styles are for large screens and will cascade down to small screens */
 /*Styles below will apply to every page*/
-@import url('https://fonts.googleapis.com/css2?family=Mate+SC&display=swap');
 
 html {
     height: 100%;
@@ -378,7 +377,7 @@ h3 {
     height: 50px;
     margin: 5px;
     background: transparent;
-    font-size: 4vh;
+    font-size: 1.75rem;
     color: #fd8d64;
     border: 3px solid #fd8d64;
     border-radius: 8px;
@@ -390,7 +389,9 @@ h3 {
     cursor: pointer;;
 }
 
-/* The Modal (background) */
+/*      The Modal */
+
+/*background*/
 .modal {
     width: 100%; 
     height: 100%; 
@@ -405,7 +406,8 @@ h3 {
     background-color: rgba(0,0,0,0.4); 
 }
 
-.modal-content {
+/*Modal content*/
+.modal-content { 
     max-width: 500px;
     margin: 0 auto;
     padding: 20px;
@@ -421,6 +423,31 @@ figcaption {
     text-align: center;
 }
 
+.modalImage {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border: #fd8d64 solid 2px;
+    border-radius: 5px;
+}
+
+/*close button*/
+.close {
+    max-width: 20px;
+    float: right;
+    margin: 0px 0px 0px auto;
+    font-size: 28px;
+    font-weight: bold;
+    color: #aaaaaa;
+}
+  
+.close:hover, .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* The table (plant products) */
 table {
     width: 100%;
     text-align: left;
@@ -439,28 +466,6 @@ th, td {
     background-color: #fffceb;
 }
 
-.modalImage {
-    width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-    border: #fd8d64 solid 2px;
-    border-radius: 5px;
-}
-
-.close {
-    max-width: 20px;
-    float: right;
-    margin: 0px 0px 0px auto;
-    font-size: 28px;
-    font-weight: bold;
-    color: #aaaaaa;
-}
-  
-.close:hover, .close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-}
 
   /* Styles are for medium screens and will cascade down to small screens */
   @media only screen and (max-width:768px) {
@@ -602,5 +607,13 @@ th, td {
 
     div.gridStart {
         grid-area: 1/1/2/2;
+    }
+
+    #dogLayout h2, #plantLayout h2 {
+        font-size: 1.5rem;
+    }
+
+    .buttons {
+        font-size: 1rem;
     }
 }
