@@ -9,25 +9,36 @@
         <link rel="stylesheet" type = "text/css" href="styles/styles.css">
     </head>
     <body>
-        <header class="flexColumn">
-            <h1>Pawsome Plants</h1>
-            <nav class="container">
-                <ul>
-                    <li><a href="index.html">About</a></li>
-                    <li><a href="products.html">Products</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+        <header>
+            <nav class="navbar navbar-expand-sm navbar-custom navbar-dark">
+                <a class="navbar-brand" href="#">Pawsome Plants</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav d-flex justify-content-between">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="products.html">Products</a>
+                        </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
                 </ul>
+                </div>
             </nav>
         </header>
         <main>
             <section class="container availableProducts" id="plantLayout">
-                <div id="gridStart" class="flexRow">
+                <div class="flexRow gridStart">
                     <h2 class="activeTab" onclick="browseProducts(event, 'plantLayout')">Plants</h2>
                     <h2 onclick="browseProducts(event,  'dogLayout')">For The Dogs</h2>
                 </div>
                 <div class="product">
                     <img src="images/babyTears.jpg" alt="baby tears">
-                    <h3>Baby Tears<h3>
+                    <h3>Baby Tears</h3>
                     <h4>$24.99</h4>
                     <button class="buttons" onclick="openProduct('babyTearsInfo')">More Info</button>
                 </div>
@@ -57,7 +68,7 @@
                 </div>
                 <div class="product">
                     <img src="images/bostonFern.jpg" alt="boston fern">
-                    <h3>Boston Fern<h3>
+                    <h3>Boston Fern</h3>
                     <h4>$28.99</h4>
                     <button class="buttons" onclick="openProduct('bostonFernInfo')">More Info</button>
                 </div>
@@ -87,7 +98,7 @@
                 </div>
                 <div class="product">
                     <img src="images/calathea.jpg" alt="Calathea" >
-                    <h3>Calathea<h3>
+                    <h3>Calathea</h3>
                     <h4>$16.99</h4>
                     <button class="buttons" onclick="openProduct('calatheaInfo')">More Info</button>
                 </div>
@@ -117,7 +128,7 @@
                 </div>
                 <div class="product">
                     <img src="images/friendshipPlant.png" alt="Friendship plant">
-                    <h3>Friendship Plant<h3>
+                    <h3>Friendship Plant</h3>
                     <h4>$32.99</h4>
                     <button class="buttons" onclick="openProduct('friendshipPlantInfo')">More Info</button>
                 </div>
@@ -147,7 +158,7 @@
                 </div>
                 <div class="product">
                     <img src="images/parlorPalm.jpg" alt="Parlor palm">
-                    <h3>Parlor Palm<h3>
+                    <h3>Parlor Palm</h3>
                     <h4>$59.99</h4>
                     <button class="buttons" onclick="openProduct('parlorPalmInfo')">More Info</button>
                 </div>
@@ -177,7 +188,7 @@
                 </div>
                 <div class="product">
                     <img src="images/spiderPlant.jpg" alt="Spider plant">
-                    <h3>Spider Plant<h3>
+                    <h3>Spider Plant</h3>
                     <h4>$12.99</h4>
                     <button class="buttons" onclick="openProduct('spiderPlantInfo')">More Info</button>
                 </div>
@@ -207,13 +218,13 @@
                 </div>
             </section>
             <section class="container availableProducts" id="dogLayout">
-                <div id="gridStart" class="flexRow">
+                <div class="flexRow gridStart">
                     <h2 onclick="browseProducts(event, 'plantLayout')">Plants</h2>
                     <h2 class="activeTab" onclick="browseProducts(event,  'dogLayout')">For The Dogs</h2>
                 </div>
                 <div class="product">
                     <img src="images/bearToy.png" alt="Bear dog toy">
-                    <h3>Bear Toy<h3>
+                    <h3>Bear Toy</h3>
                     <h4>$24.99</h4>
                     <button class="buttons" onclick="openProduct('bearToyInfo')">More Info</button>
                 </div>
@@ -222,13 +233,13 @@
                         <span class="close" onclick="closeProduct('bearToyInfo')">&times;</span>
                         <figure>
                             <img src="images/bearToy.png" alt="Bear Toy" class="modalImage">
-                            <figcaption>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit excepturi rem ullam? Dolore hic alias deserunt laboriosam, id quod cupiditate, molestiae quidem similique perferendis ab!</figcaption>
+                            <figcaption>This soft material will leave your dog wanting more.  Machine washable makes this toy easy to clean and with layers of durable material this toy is hard to tear apart.  If your dog can get through the material the squeaker is sewn into a safety pocket to ensure your dog does not get ahold of the squeaker.</figcaption>
                         </figure>
                     </div>
                 </div>
                 <div class="product">
                     <img src="images/dogBed.jpg" alt="Dog Bed">
-                    <h3>Dog Bed<h3>
+                    <h3>Dog Bed</h3>
                     <h4>$149.99</h4>
                     <button class="buttons moreInfo" onclick="openProduct('dogBedInfo')">More Info</button>
                 </div>
@@ -237,13 +248,13 @@
                         <span class="close" onclick="closeProduct('dogBedInfo')">&times;</span>
                         <figure>
                             <img src="images/dogBed.jpg" alt="Dog Bed" class="modalImage">
-                            <figcaption>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit excepturi rem ullam? Dolore hic alias deserunt laboriosam, id quod cupiditate, molestiae quidem similique perferendis ab!</figcaption>
+                            <figcaption>This is dog bed is top of the line in it’s class.  With premium material to maximize comfort this bed is also lifted off the ground making it the perfect bed to put in front of a window. </figcaption>
                         </figure>
                     </div>
                 </div>
                 <div class="product">
                     <img src="images/hamBone.jpg" alt="Ham Bone">
-                    <h3>Ham Bone<h3>
+                    <h3>Ham Bone</h3>
                     <h4>5.99</h4>
                     <button class="buttons" onclick="openProduct('hamBoneInfo')">More Info</button>
                 </div>
@@ -252,13 +263,13 @@
                         <span class="close" onclick="closeProduct('hamBoneInfo')">&times;</span>
                         <figure>
                             <img src="images/hamBone.jpg" alt="Ham Bone" class="modalImage">
-                            <figcaption>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit excepturi rem ullam? Dolore hic alias deserunt laboriosam, id quod cupiditate, molestiae quidem similique perferendis ab!</figcaption>
+                            <figcaption>This yummy treat will be a luxury for your dog.  USA sourced pork is the one and only ingredient in this snack.  Chomping on this bone will help improve your dog’s oral hygiene as it chewing gently scraps plaque. </figcaption>
                         </figure>
                     </div>
                 </div>
                 <div class="product">
                     <img src="images/tennisBalls.jpg" alt="Tennis Balls">
-                    <h3>Tennis Balls<h3>
+                    <h3>Tennis Balls</h3>
                     <h4>8.99</h4>
                     <button class="buttons" onclick="openProduct('tennisBallsInfo')">More Info</button>
                 </div>
@@ -267,7 +278,7 @@
                         <span class="close" onclick="closeProduct('tennisBallsInfo')">&times;</span>
                         <figure>
                             <img src="images/tennisBalls.jpg" alt="Tennis Balls" class="modalImage">
-                            <figcaption>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit excepturi rem ullam? Dolore hic alias deserunt laboriosam, id quod cupiditate, molestiae quidem similique perferendis ab!</figcaption>
+                            <figcaption>This one squeaks for itself, a tennis ball.  Balls and dogs have always gone together.  Our tennis balls have squeakers in them to keep your dog wanting more.</figcaption>
                         </figure>
                     </div>
                 </div>
@@ -283,6 +294,9 @@
             Lorem ipsum dolor sit amet consectetur.
             </p>
         </footer>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <script src="scripts/script.js"></script>
     </body>
 </html>

@@ -9,14 +9,25 @@
     </head>
     <body>
         <div id="contentWrap">
-            <header class="flexColumn">
-                <h1>Pawsome Plants</h1>
-                <nav class="container">
-                    <ul>
-                        <li><a href="index.html"><strong>About</strong></a></li>
-                        <li><a href="products.html">Products</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+            <header>
+                <nav class="navbar navbar-expand-sm navbar-custom navbar-dark">
+                    <a class="navbar-brand" href="index.html">Pawsome Plants</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav d-flex justify-content-between">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="products.html">Products</a>
+                            </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
                     </ul>
+                    </div>
                 </nav>
             </header>
             <main>
@@ -59,21 +70,15 @@
             </main>
             <section id="quickLinks" class="container">
                 <div class="shopNow">
-                    <img src="images/plants.png" alt="link to goto plants catalog">
+                    <img src="images/shopNow.png" alt="link to goto products">
                     <a href="products.html">
-                        <p>Shop Now!</p>
-                    </a>
-                </div>
-                <div class="shopNow">
-                    <img src="images/forTheDogs.png" alt="link to goto for the dogs catalog">
-                    <a href="#">
-                        <p>Shop Now!</p>
+                        <p>Explore plants and products for the dogs!</p>
                     </a>
                 </div>
             </section>
             <section id="getInTouch" class="container flexColumn">
                 <h2>Get in touch!</h2>
-                <div id="contact"class="flexRow">
+                <div id="contact" class="flexRow">
                     <p><strong>Hours: </strong><em>Everyday 10am-6pm</em></p>
                     <p><strong>Address: </strong><em>123 Any Street, City, State 54545</em></p>
                     <p><strong>Phone: </strong><em>(512) 867-5309</em></p>
