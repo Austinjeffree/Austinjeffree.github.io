@@ -13,6 +13,7 @@ html {
     max-width: 1060px;
     width: 100%; 
     margin: 0 auto;
+    padding: 0 5px;
 }
 
 .mediumContainer {
@@ -523,7 +524,11 @@ th, td {
     @media only screen and (max-width:480px) {
     /*Styles specific will impact all pages */
     .container {
-        max-width: 480px;
+        width: 95%;
+    }
+
+    .mediumContainer {
+        width: 95%;
     }
 
     header {
@@ -559,6 +564,7 @@ th, td {
 
 
    /* styles will impact index page only */
+   
 
     main p {
         font-weight: normal;
