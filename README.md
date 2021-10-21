@@ -1,7 +1,7 @@
 # Pawsome Plants
 
 
-Pawsome Plants is a website intended for viewing products online.  The website consists of dog-friendly plants and products for dogs as well.  It also includes care instructions for the plants being looked at and an option to get in contact with the staff of the shop. [Click here](https://austinjeffree.github.io) to view this code in action. 
+[Pawsome Plants](https://austinjeffree.github.io) is a website intended for viewing products online.  The website consists of dog-friendly plants and products for dogs as well.  It also includes care instructions for the plants being looked at and an option to get in contact with the staff of the shop. 
 
 The website will consist of 3 different pages, an about page, products page, and a contact page.  
 
